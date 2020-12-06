@@ -1,0 +1,8 @@
+<div *ngIf="showLess">
+    <p>{{shortText}}</p>
+    <p (click)="showText('longText')" class="text-right text-primary"><u>Show more</u></p>
+</div>
+<div *ngIf="!showLess">
+    <p>{{description}}</p>
+    <p class="text-right text-primary" (click)="showText('shortText')"><u>Show less</u></p>
+</div>

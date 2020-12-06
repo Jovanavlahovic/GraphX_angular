@@ -1,0 +1,17 @@
+<div class="row" >
+    <div class="col-3">
+    <img src="{{ card?.image }}" alt="card-image" width="100%" height="auto" />
+  </div>
+  <div class="col-9">
+    <span class="text-primary" (click)="sendId(card?._id)">{{ card?.title }}</span
+    ><span
+      ><small>{{ card?.subtitle }}</small></span
+    >
+    <p class="text-justify"><app-show-more [description]="card?.description"></app-show-more></p>
+  </div>
+  <div class="ml-auto">
+      <button type="button" class="btn btn-danger" (click)="changeGrade(card?.grade-1)">-</button>
+      <p class="ml-1 mr-1 d-inline">{{ card?.grade }}</p>
+      <button type="button" class="btn btn-success" (click)="changeGrade(card?.grade+1)">+</button>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<form *ngIf="commentList">
+  <div class="form-group">
+    <input type="text" id="name" name="name" placeholder="Name"  [(ngModel)]="newComment.author">
+    <input type="text" class="mt-2" name="comment" id="comment" placeholder="Comment..."  [(ngModel)]="newComment.text">
+  </div>
+  <button class="btn btn-primary mt-2" (click)="addComment()">Submit</button>
+</form>
+<div class="" *ngFor='let comm of commentList'>
+  <span><b>{{comm?.author}}</b></span><span>{{comm?.date | date: 'd.M.y.'}}</span>
+  <p>{{comm?.text}}</p>
+</div>
